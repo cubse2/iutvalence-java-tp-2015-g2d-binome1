@@ -1,9 +1,11 @@
 package fr.iutvalence.groupe1.pusher;
 
-/*
- * Classe désignant le personnage sur le plateau
+/**
+ * Personnage sur le plateau.
+ *
+ * @author TODO
+ * @version TODO
  */
-public class Character extends Element
-{
-	// TODO Créer constructeur
+public class Character extends Element {
+    /* TODO Constructeur. */
 }

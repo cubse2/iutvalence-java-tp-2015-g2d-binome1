@@ -1,15 +1,17 @@
 package fr.iutvalence.groupe1.pusher;
 
-/*
- * Classe définissant un mur sur le plateau
+/**
+ * Mur sur le plateau.
+ *
+ * @author TODO
+ * @version TODO
  */
-public class Wall extends Element
-{
-	public final static boolean WALL = false;
-	
-	public Wall()
-	{
-		super(WALL);
-	}
-	
+public class Wall extends Element {
+    /* TODO JAVADOC. */
+    public static final boolean WALL = false;
+
+    /* TODO JAVADOC. */
+    public Wall() {
+        super(WALL);
+    }
 }

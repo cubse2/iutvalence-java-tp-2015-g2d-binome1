@@ -1,9 +1,11 @@
 package fr.iutvalence.groupe1.pusher;
 
-/*
- * Classe définissant un point d'arrivé d'une caisse sur le plateau
+/**
+ * ModÃ©lisation d'un point d'arrivÃ© d'une caisse sur le plateau.
+ *
+ * @author TODO
+ * @version TODO
  */
-public class Checkpoint extends Element
-{
-	// TODO Créer constructeur
+public class Checkpoint extends Element {
+    /* TODO Constructeur. */
 }
