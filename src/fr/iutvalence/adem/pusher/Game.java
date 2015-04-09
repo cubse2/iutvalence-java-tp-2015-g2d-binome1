@@ -1,12 +1,12 @@
 package fr.iutvalence.adem.pusher;
 
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 /*
  * 
  */
-public class Game implements KeyListener {
+public class Game extends KeyAdapter {
     private Board board;
 
     public Game() {
@@ -19,16 +19,6 @@ public class Game implements KeyListener {
         if (e.getKeyCode() == KeyEvent.VK_Z) {
             System.out.println("coucou");
         }
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-        // TODO Auto-generated method stub
-    }
-
-    @Override
-    public void keyTyped(KeyEvent e) {
-        // TODO Auto-generated method stub
     }
 
     /* TODO JAVADOC. */
