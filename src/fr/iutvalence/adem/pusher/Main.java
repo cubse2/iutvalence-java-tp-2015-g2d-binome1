@@ -4,9 +4,7 @@ package fr.iutvalence.adem.pusher;
 public class Main {
     /* TODO JAVADOC. */
     public static void main(String[] args) {
-        /* TODO Plutôt qu'une Board nous voudrions plutôt attaquer par une Partie. */
-    	
-        Game game = new Game();
-        
+        final Game game = new Game();
+        game.start();
     }
 }
