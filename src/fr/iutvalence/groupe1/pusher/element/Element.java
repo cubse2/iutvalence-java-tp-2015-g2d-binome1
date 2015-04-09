@@ -1,4 +1,4 @@
-package fr.iutvalence.groupe1.pusher;
+package fr.iutvalence.groupe1.pusher.element;
 
 /* TODO Pourquoi abstract s'il n'y a pas de méthodes abstraites (ça ne veut pas dire que cette classe ne doivent pas être abstraite). */
 /* TODO Pourquoi est-ce que surmountable est un paramètre du constructeur ? À discuter en séance, c'est une bonne idée mais pas sur cette visibilité. */
@@ -11,15 +11,15 @@ package fr.iutvalence.groupe1.pusher;
  */
 public abstract class Element {
     /* TODO JAVADOC. */
-    private boolean surmountable;
+    private final boolean surmountable;
 
     /* TODO JAVADOC. */
-    public Element(boolean smt) {
+    protected Element(boolean smt) {
         this.surmountable = smt;
     }
 
     /* TODO JAVADOC. */
-    public boolean isSurmountable() {
+    public final boolean isSurmountable() {
         return surmountable;
     }
 }

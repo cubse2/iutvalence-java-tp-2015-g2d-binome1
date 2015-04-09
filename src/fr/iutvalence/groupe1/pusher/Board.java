@@ -1,50 +1,56 @@
 package fr.iutvalence.groupe1.pusher;
 
+import fr.iutvalence.groupe1.pusher.element.Element;
+import fr.iutvalence.groupe1.pusher.element.Floor;
+import fr.iutvalence.groupe1.pusher.element.Wall;
+import fr.iutvalence.groupe1.pusher.element.Character;
+
 /* TODO JAVADOC. */
 public class Board {
-    /* TODO Visibilité ? Pourquoi public ? */
+	
     /** Nombre de lignes par défaut. */
-    public static final int NUMBER_LINE_DEFAULT   = 10;
+    private static final int NUMBER_LINE_DEFAULT   = 10;
     /** Nombre de colonnes par défaut. */
-    public static final int NUMBER_COLUMN_DEFAULT = 10;
-    /* TODO Final ? */
+    private static final int NUMBER_COLUMN_DEFAULT = 10;
     /** Représentation du plateau. */
-    private Case[][] board;
+    private final Element[][] board;
 
     /** Construction d'un plateau utilisant la taille par défaut. */
     public Board() {
-        this.board = new Case[NUMBER_LINE_DEFAULT][NUMBER_COLUMN_DEFAULT];
-        for (int i = 0; i < NUMBER_LINE_DEFAULT; i++) {
-            for (int j = 0; j < NUMBER_COLUMN_DEFAULT; j++) {
-                /* TODO À simplifier par une ternaire (pour voir). */
-                /* TODO Sortir le test dans une méthode privée. */
-                if (i > 1 && i <= 7 && j > 1 && j <= 7) {
-                    this.board[i][j] = new Case(i, j, new Floor());
-                }
-                else {
-                    this.board[i][j] = new Case(i, j, new Wall());
-                }
-
-            }
-        }
+        this.board = generateBoard();
     }
 
-    @Override
-    public String toString() {
-        /* TODO String vs StringBuffer vs StringBuilder. */
-        String result = " ";
+    
+    /** TODO JAVADOC. */
+    private static Element[][] generateBoard() {
+    	final Element[][] board = new Element[NUMBER_LINE_DEFAULT][NUMBER_COLUMN_DEFAULT];
         for (int i = 0; i < NUMBER_LINE_DEFAULT; i++) {
-            for (int j = 0; j < NUMBER_LINE_DEFAULT; j++) {
-                /* TODO Est-ce que ce test devrait être là ? */
-                if (this.board[i][j].getElement().isSurmountable()) {
-                    result = result + "   ";
+            for (int j = 0; j < NUMBER_COLUMN_DEFAULT; j++) {
+                if (i > 1 && i <= 7 && j > 1 && j <= 7) {
+                    board[i][j] = new Floor();
                 }
                 else {
-                    result = result + " X ";
+                    board[i][j] = new Wall();
                 }
+                if (i==5 && j==5){
+                	board[i][j] = new Character();
+                }
+                
             }
-            result = result + " \n ";
         }
-        return result;
+        return board;
+    }
+    
+    @Override
+    public String toString() {
+
+    	StringBuilder result = new StringBuilder(" ");
+        for (int i = 0; i < NUMBER_LINE_DEFAULT; i++) {
+            for (int j = 0; j < NUMBER_LINE_DEFAULT; j++) {
+            	result.append(this.board[i][j].toString());
+            }
+            result.append(" \n ");
+        }
+        return result.toString();
     }
 }
