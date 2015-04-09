@@ -8,14 +8,16 @@ package fr.iutvalence.adem.pusher.element;
  */
 public class Wall extends Element {
     /* TODO JAVADOC. */
-    private static final boolean IS_SURMOUNTABLE = false;
+    private static final boolean IS_UNSURMOUNTABLE = false;
 
     /* TODO JAVADOC. */
     public Wall() {
-        super(IS_SURMOUNTABLE);
+        super(IS_UNSURMOUNTABLE);
     }
-    
-    public String toString(){
-    	return " # ";
+
+    /* TODO JAVADOC. */
+    @Override
+    public String toString() {
+        return " # ";
     }
 }

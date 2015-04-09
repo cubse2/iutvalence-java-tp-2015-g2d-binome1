@@ -7,12 +7,9 @@ package fr.iutvalence.adem.pusher.element;
  * @version TODO
  */
 public class EndPoint extends Floor {
-    /* TODO Constructeur. */
-	public EndPoint(){
-		super();
-	}
-	
-    public String toString(){
-    	return " · ";
+    /* TODO JAVADOC. */
+    @Override
+    public String toString() {
+        return " · ";
     }
 }
