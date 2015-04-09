@@ -1,4 +1,4 @@
-package fr.iutvalence.groupe1.pusher.element;
+package fr.iutvalence.adem.pusher.element;
 
 /* TODO Pourquoi abstract s'il n'y a pas de méthodes abstraites (ça ne veut pas dire que cette classe ne doivent pas être abstraite). */
 /* TODO Pourquoi est-ce que surmountable est un paramètre du constructeur ? À discuter en séance, c'est une bonne idée mais pas sur cette visibilité. */

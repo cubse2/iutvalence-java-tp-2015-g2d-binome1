@@ -1,4 +1,4 @@
-package fr.iutvalence.groupe1.pusher;
+package fr.iutvalence.adem.pusher;
 
 /* TODO JAVADOC. */
 public class Main {

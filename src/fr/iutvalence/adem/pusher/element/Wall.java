@@ -1,4 +1,4 @@
-package fr.iutvalence.groupe1.pusher.element;
+package fr.iutvalence.adem.pusher.element;
 
 /**
  * Mur sur le plateau.

@@ -1,4 +1,4 @@
-package fr.iutvalence.groupe1.pusher.element;
+package fr.iutvalence.adem.pusher.element;
 
 /**
  * Modélisation d'un point d'arrivé d'une caisse sur le plateau.
