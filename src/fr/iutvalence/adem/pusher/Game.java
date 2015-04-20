@@ -1,10 +1,10 @@
 package fr.iutvalence.adem.pusher;
 
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.util.Scanner;
+
 
 /* TODO JAVADOC. */
-public class Game extends KeyAdapter {
+public class Game {
     /* TODO JAVADOC. */
     private Board board;
 
@@ -12,14 +12,20 @@ public class Game extends KeyAdapter {
     public Game() {
         this.board = new Board();
         System.out.println(this.board.toString());
-    }
-
-    @Override
-    public void keyPressed(final KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_Z) {
-            System.out.println("coucou");
+        Scanner sc = new Scanner(System.in);
+        
+        while(true){
+	
+	        System.out.println("Bougez vous !!! : ");
+	        String  mv = sc.nextLine();
+	        
+	        this.board.move(mv);
+	        this.board.checkEndPoint();
+	        System.out.println(this.board.toString());
+	        
         }
     }
+
 
     /* TODO JAVADOC. */
     public void start() {}
