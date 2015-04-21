@@ -1,6 +1,6 @@
 package fr.iutvalence.adem.pusher.element;
 
-
+/* TODO Translate. */
 /**
  * Modélisation d'une caisse sur le plateau.
  *

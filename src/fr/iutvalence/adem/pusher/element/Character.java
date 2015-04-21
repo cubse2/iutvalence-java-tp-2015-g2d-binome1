@@ -1,5 +1,6 @@
 package fr.iutvalence.adem.pusher.element;
 
+/* TODO Translate. */
 /**
  * Personnage sur le plateau.
  *

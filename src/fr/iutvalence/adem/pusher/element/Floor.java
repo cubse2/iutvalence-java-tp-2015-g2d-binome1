@@ -1,5 +1,6 @@
 package fr.iutvalence.adem.pusher.element;
 
+/* TODO Translate. */
 /**
  * Sol du plateau.
  *
@@ -17,7 +18,7 @@ public class Floor extends Element {
 
     /* TODO JAVADOC. */
     @Override
-    public String toString(){
-    	return "   ";
+    public String toString() {
+        return "   ";
     }
 }

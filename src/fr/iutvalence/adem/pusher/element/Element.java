@@ -1,5 +1,6 @@
 package fr.iutvalence.adem.pusher.element;
 
+/* TODO Translate. */
 /**
  * Modélisation d'un élément du plateau.
  *
@@ -20,6 +21,7 @@ public abstract class Element {
         return surmountable;
     }
 
+    /* TODO Why provide a default toString in Element? */
     @Override
     public String toString() {
         return "";
