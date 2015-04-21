@@ -1,8 +1,7 @@
 PUSHER
 ======
 
-# Remarques 
+# Remarks
 
-- 01/04/2015 :
-    - Répondre à mes TODO.
-    - Attention à la forme de la javadoc. C'est "/**" et non "/*".
+- 04/21/2015 :
+    - Address my TODO. I will start to remove points on your final evaluation.
