@@ -13,4 +13,8 @@ public class EndPoint extends Floor {
     public String toString() {
         return " ¤ ";
     }
+    
+    public boolean isEndPoint(){
+		return true;
+	}
 }

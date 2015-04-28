@@ -15,6 +15,11 @@ public class Character extends Element{
     public Character() {
         super(IS_SURMOUNTABLE);
     }
+    
+    public boolean isCharacter()
+	{
+		return true;
+	}
 
     /* TODO JAVADOC. */
     @Override
