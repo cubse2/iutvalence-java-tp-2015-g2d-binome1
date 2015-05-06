@@ -1,19 +1,22 @@
 package fr.iutvalence.adem.pusher.element;
 
-/* TODO Translate. */
 /**
- * Modélisation d'un point d'arrivé d'une caisse sur le plateau.
- *
- * @author TODO
- * @version TODO
+ * EndPoint representation on the board.
+ * @author anthony lafont | adem gurbuz
  */
 public class EndPoint extends Floor {
-    /* TODO JAVADOC. */
+    
+	/**
+     * String representation of end points
+     */
     @Override
     public String toString() {
         return " ¤ ";
     }
     
+    /**
+     * The end point is an end point
+     */
     public boolean isEndPoint(){
 		return true;
 	}

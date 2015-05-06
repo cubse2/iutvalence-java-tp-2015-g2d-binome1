@@ -1,22 +1,26 @@
 package fr.iutvalence.adem.pusher.element;
 
-/* TODO Translate. */
 /**
- * Mur sur le plateau.
- *
- * @author TODO
- * @version TODO
+ * wall on the board.
+ * @author anthony lafont | adem gurbuz
  */
 public class Wall extends Element {
-    /* TODO JAVADOC. */
+	
+	/**
+     * wall is not surmountable
+     */
     private static final boolean IS_UNSURMOUNTABLE = false;
 
-    /* TODO JAVADOC. */
+    /**
+     * The constructor
+     */
     public Wall() {
         super(IS_UNSURMOUNTABLE);
     }
 
-    /* TODO JAVADOC. */
+    /**
+     * String representation of walls
+     */
     @Override
     public String toString() {
         return " # ";

@@ -1,27 +1,34 @@
 package fr.iutvalence.adem.pusher.element;
 
-/* TODO Translate. */
 /**
- * Personnage sur le plateau.
- *
- * @author TODO
- * @version TODO
+ * Character on the board.
+ * @author anthony lafont | adem gurbuz
  */
 public class Character extends Element{
-    /* TODO Constructeur. */
+    
+	/**
+     * The character is not surmountable
+     */
     private static final boolean IS_SURMOUNTABLE = false;
 
-    /* TODO JAVADOC. */
+    /**
+     * The constructor
+     */
     public Character() {
         super(IS_SURMOUNTABLE);
     }
     
+    /**
+     * The character is a character
+     */
     public boolean isCharacter()
 	{
 		return true;
 	}
 
-    /* TODO JAVADOC. */
+    /**
+     * String representation of the character
+     */
     @Override
     public String toString(){
     	return " A ";

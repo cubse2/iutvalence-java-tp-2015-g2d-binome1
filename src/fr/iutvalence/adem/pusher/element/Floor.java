@@ -1,22 +1,26 @@
 package fr.iutvalence.adem.pusher.element;
 
-/* TODO Translate. */
 /**
- * Sol du plateau.
- *
- * @author TODO
- * @version TODO
+ * Floor of the board.
+ * @author anthony lafont | adem gurbuz
  */
 public class Floor extends Element {
-    /* TODO JAVADOC. */
+
+	/**
+     * The floor is surmountable
+     */
     private static final boolean IS_SURMOUNTABLE = true;
 
-    /* TODO JAVADOC. */
+    /**
+     * The constructor
+     */
     public Floor() {
         super(IS_SURMOUNTABLE);
     }
 
-    /* TODO JAVADOC. */
+    /**
+     * String representation of the floor
+     */
     @Override
     public String toString() {
         return "   ";

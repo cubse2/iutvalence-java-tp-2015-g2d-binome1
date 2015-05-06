@@ -1,11 +1,8 @@
 package fr.iutvalence.adem.pusher.element;
 
-/* TODO Translate. */
 /**
- * Modélisation d'un élément du plateau.
- *
- * @author TODO
- * @version TODO
+ * Element on the board
+ * @author anthony lafont | adem gurbuz
  */
 public abstract class Element
 {
@@ -14,32 +11,36 @@ public abstract class Element
 	 */
 	private final boolean surmountable;
 
-	/* TODO JAVADOC. */
+	/** the constructor. */
 	protected Element(boolean smt)
 	{
 		this.surmountable = smt;
 	}
 
-	/* TODO JAVADOC. */
+	/**
+	 * return if the element is surmountable
+	 * @return surmountable
+	 */
 	public final boolean isSurmountable()
 	{
 		return surmountable;
 	}
 
+	/**
+	 * return if the element is a character
+	 * @return boolean
+	 */
 	public boolean isCharacter()
 	{
 		return false;
 	}
 
+	/**
+	 * return if the element is an endPoint
+	 * @return boolean
+	 */
 	public boolean isEndPoint()
 	{
 		return false;
-	}
-
-	/* TODO Why provide a default toString in Element? */
-	@Override
-	public String toString()
-	{
-		return "";
 	}
 }

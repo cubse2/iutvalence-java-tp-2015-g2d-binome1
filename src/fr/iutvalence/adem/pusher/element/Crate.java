@@ -1,21 +1,26 @@
 package fr.iutvalence.adem.pusher.element;
 
-/* TODO Translate. */
 /**
- * Modélisation d'une caisse sur le plateau.
- *
- * @author TODO
- * @version TODO
+ * crate class
+ * @author anthony lafont | adem gurbuz
  */
 public class Crate extends Element {
-    /* TODO Constructeur. */
+	
+	/**
+     * crate is not surmountable
+     */
     private static final boolean IS_SURMOUNTABLE = false;
 
-    /* TODO JAVADOC. */
+    /**
+     * The constructor
+     */
     public Crate() {
         super(IS_SURMOUNTABLE);
     }
     
+    /**
+     * String representation of crates
+     */
     @Override
     public String toString(){
     	return " X ";

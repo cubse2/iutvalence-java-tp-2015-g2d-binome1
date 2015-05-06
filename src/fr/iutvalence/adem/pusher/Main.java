@@ -1,8 +1,15 @@
 package fr.iutvalence.adem.pusher;
 
-/* TODO JAVADOC. */
+/**
+ * the Main class
+ * @author anthony lafont | adem gurbuz
+ */
 public class Main {
-    /* TODO JAVADOC. */
+
+	/**
+	 * Start of the game
+	 * @param args
+	 */
     public static void main(String[] args) {
         final Game game = new Game();
         game.start();

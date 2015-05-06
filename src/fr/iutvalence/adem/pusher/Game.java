@@ -2,13 +2,20 @@ package fr.iutvalence.adem.pusher;
 
 import java.util.Scanner;
 
-/* TODO JAVADOC. */
+/**
+ * Represent a game
+ * @author anthony lafont | adem gurbuz
+ */
 public class Game
 {
-	/* TODO JAVADOC. */
+	/**
+	 * The board
+	 */
 	private Board board;
 
-	/* TODO JAVADOC. */
+	/**
+	 * The constructor
+	 */
 	public Game()
 	{
 		this.board = new Board();
@@ -17,8 +24,7 @@ public class Game
 		Scanner sc = new Scanner(System.in);
 		while (true)
 		{
-			/* TODO Translate. */
-			System.out.println("Bougez vous !!! : ");
+			System.out.println("Move ? : ");
 			String mv = sc.nextLine();
 			switch (mv)
 			{
@@ -40,8 +46,11 @@ public class Game
 		}
 	}
 
-	/* TODO JAVADOC. */
+	/**
+	 * Start a game
+	 */
 	public void start()
 	{
+		
 	}
 }

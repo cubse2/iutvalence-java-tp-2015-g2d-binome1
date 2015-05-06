@@ -1,10 +1,8 @@
 package fr.iutvalence.adem.pusher;
 
 /**
- * enumeration of different possible movement in the game.
- * 
- * @author lafonta
- *
+ * Enumeration of different possible movement in the game.
+ * @author anthony lafont | adem gurbuz
  */
 public enum Movement {
 
