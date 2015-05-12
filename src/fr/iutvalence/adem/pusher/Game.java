@@ -18,11 +18,11 @@ public class Game
 	 * The constructor
 	 * @throws IOException 
 	 */
-	public Game() throws IOException
+	public Game(int lvlNumber) throws IOException
 	{
-		this.board = new Board(1);
+		this.board = new Board(lvlNumber);
 	}
-
+	
 	/**
 	 * Start a game
 	 */

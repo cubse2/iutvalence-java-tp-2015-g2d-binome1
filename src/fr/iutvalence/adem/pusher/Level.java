@@ -72,6 +72,11 @@ public class Level
 					this.PosiCharacter = posi;
 					posi = incrementPosition(posi);
 					break;
+				case 53:
+					level[posi.getPosiX()][posi.getPosiY()]=new Crate();
+					this.listEndPoint.add(posi);
+					posi = incrementPosition(posi);
+					break;
 			}
 		}
 		fileReader.close(); 		
