@@ -19,6 +19,15 @@ public class Crate extends Element {
     }
     
     /**
+	 * return if the element is a crate
+	 * @return boolean
+	 */
+    public boolean isCrate()
+    {
+    	return true;
+    }
+    
+    /**
      * String representation of crates
      */
     @Override

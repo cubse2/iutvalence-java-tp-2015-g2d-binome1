@@ -1,5 +1,6 @@
 package fr.iutvalence.adem.pusher;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -15,14 +16,21 @@ public class Game
 
 	/**
 	 * The constructor
+	 * @throws IOException 
 	 */
-	public Game()
+	public Game() throws IOException
 	{
-		this.board = new Board();
+		this.board = new Board(1);
+	}
+
+	/**
+	 * Start a game
+	 */
+	public void start()
+	{
 		System.out.println(this.board);
-		/* TODO This should not be here. We will discuss it later. */
 		Scanner sc = new Scanner(System.in);
-		while (true)
+		while (!board.isWon())
 		{
 			System.out.println("Move ? : ");
 			String mv = sc.nextLine();
@@ -42,15 +50,7 @@ public class Game
 				break;
 			}
 			System.out.println(this.board);
-
 		}
-	}
-
-	/**
-	 * Start a game
-	 */
-	public void start()
-	{
-		
+		System.out.println("Congratulation !!!");
 	}
 }

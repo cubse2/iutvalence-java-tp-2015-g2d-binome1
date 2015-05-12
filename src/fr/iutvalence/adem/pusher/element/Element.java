@@ -43,4 +43,13 @@ public abstract class Element
 	{
 		return false;
 	}
+	
+	/**
+	 * return if the element is a crate
+	 * @return boolean
+	 */
+	public boolean isCrate()
+	{
+		return false;
+	}
 }
