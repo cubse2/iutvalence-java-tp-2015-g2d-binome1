@@ -15,9 +15,9 @@ public class Main {
 	 * Start of the game
 	 * @param args
 	 * @throws IOException 
+	 * @throws LevelNumberException 
 	 */
-    public static void main(String[] args) throws IOException {
-    	
+    public static void main(String[] args) throws IOException, LevelNumberException {
     	
 		System.out.println("-----Sokoban-----");
 		System.out.println("1: Beginner");
@@ -27,8 +27,14 @@ public class Main {
 		System.out.println("5: PGM");
 		System.out.println("Select your level(select number):");
 		
-		selectLvL = new Scanner(System.in);
+		selectLvL = new Scanner(System.in);	
 		int lvlNumber = selectLvL.nextInt();
+		while (lvlNumber>5 || lvlNumber<0)
+		{
+			System.out.println("Choose a good number : ");
+			selectLvL = new Scanner(System.in);	
+			lvlNumber = selectLvL.nextInt();	
+		}
 		
         final Game game = new Game(lvlNumber);
         game.start();
