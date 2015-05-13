@@ -21,16 +21,16 @@ public class Game
 	public Game(int lvlNumber, int lvlMax) throws IOException, LevelNumberException
 	{
 		if (lvlNumber > lvlMax){
-			throw new LevelNumberException();
+			throw new LevelNumberException("Level not available!");
 		}
 		this.board = new Board(lvlNumber);
 	}
 	
 	/**
-	 * Start a game
+	 * The player is playing
 	 * @throws WrongMoveException 
 	 */
-	public void start()
+	public void play()
 	{
 		System.out.println(this.board);
 		Scanner sc = new Scanner(System.in);
@@ -55,6 +55,13 @@ public class Game
 			}
 			System.out.println(this.board);
 		}
+		this.victory();
+	}
+	
+	/**
+	 * When the player win.
+	 */
+	private void victory(){
 		System.out.println("Congratulation !!!");
 	}
 }

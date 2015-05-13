@@ -1,12 +1,17 @@
 package fr.iutvalence.adem.pusher;
 
+/**
+ * The exception when the player select high level. 
+ * @author anthony lafont | adem gurbuz
+ *
+ */
 public class LevelNumberException extends Exception{
 
-	public LevelNumberException(){
-		
-	}
-	
-	public String getMessage(){
-		return "Level not available!";
+	/**
+	 * The constructor of the exception.
+	 * @param message
+	 */
+	public LevelNumberException(String message){
+		super(message);
 	}
 }

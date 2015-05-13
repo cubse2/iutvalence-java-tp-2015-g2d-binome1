@@ -19,7 +19,7 @@ public class Character extends Element{
     }
     
     /**
-     * The character is a character
+     * return if the element is a character
      */
     public boolean isCharacter()
 	{

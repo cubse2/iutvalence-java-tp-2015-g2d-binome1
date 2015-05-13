@@ -1,7 +1,7 @@
 package fr.iutvalence.adem.pusher;
 
 /**
- * position of a element.
+ * position of an element.
  * @author anthony lafont | adem gurbuz
  */
 public class Position

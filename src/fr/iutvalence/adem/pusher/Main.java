@@ -10,20 +10,21 @@ import java.util.Scanner;
  */
 public class Main {
 
-	private static Scanner selectLvL;
-	private static Scanner continu;
-	private static char  charNewGame='y';
+	/**
+	 * The maximum level available
+	 */
 	private static int levelMax = 1;
 	/**
 	 * Start of the game
 	 * @param args
 	 * @throws IOException 
 	 * @throws LevelNumberException 
-	 * @throws WrongMoveException 
 	 */
     public static void main(String[] args) throws IOException, LevelNumberException {
     	
     	int lvlNumber = 0;
+    	char charNewGame = 'y';
+    	Scanner choiceOfPlayer = new Scanner(System.in);
     	while(charNewGame == 'y' || charNewGame == 'Y')
     	{
 			System.out.println("-----Sokoban-----");
@@ -35,9 +36,9 @@ public class Main {
 			
 			do {
 				try{
+					choiceOfPlayer = new Scanner(System.in);
 					System.out.println("Select your level(select number):");
-					selectLvL = new Scanner(System.in);	
-					lvlNumber = selectLvL.nextInt();
+					lvlNumber = choiceOfPlayer.nextInt();
 				}
 				catch(NoSuchElementException e){
 					System.out.println("Number available (1-5)");
@@ -46,23 +47,20 @@ public class Main {
 			
 			try{
 				final Game game = new Game(lvlNumber, levelMax);
-				game.start();
+				game.play();
 				levelMax++;
 			}
 			catch(LevelNumberException e){
 				System.out.println(e.getMessage());
 			}
 	        
-	        continu = new Scanner(System.in);
-	        System.out.println("New game? (y/n)");
-	        String newGame = continu.nextLine();
-	        charNewGame = newGame.charAt(0);
-	        while (charNewGame != 'y' && charNewGame != 'Y' && charNewGame != 'n' && charNewGame != 'N')
-	        {
-        		System.out.println("New game? (y/n)");
-	        	newGame = continu.nextLine();
+	        
+	        do{
+	        	choiceOfPlayer = new Scanner(System.in);
+		        System.out.println("New game? (y/n)");
+		        String newGame = choiceOfPlayer.nextLine();
 		        charNewGame = newGame.charAt(0);
-	        }
+	        } while (charNewGame != 'y' && charNewGame != 'Y' && charNewGame != 'n' && charNewGame != 'N');
     	}
     }
 }

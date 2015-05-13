@@ -17,7 +17,7 @@ import fr.iutvalence.adem.pusher.element.Floor;
 import fr.iutvalence.adem.pusher.element.Wall;
 
 /**
- * The differents level in the game.
+ * The generator of level in the game.
  * @author anthony lafont | adem gurbuz
  */
 public class Level
@@ -27,19 +27,40 @@ public class Level
 	/** Default number of column. */
 	private static final int NUMBER_COLUMN_DEFAULT = 10;
 	
-	
+	/**
+	 * levelNumber of the level.
+	 */
 	private int levelNumber;
+	/**
+	 * board generated.
+	 */
 	private Element[][] levelGenerated;
+	/**
+	 * Position of the character.
+	 */
 	private Position PosiCharacter;
+	/**
+	 * collection of endPoints
+	 */
 	private Set<Position> listEndPoint;
 	
+	/**
+	 * The constructor
+	 * @param level
+	 * @throws IOException
+	 */
 	public Level(int level) throws IOException{
 		this.levelNumber = level;
 		this.listEndPoint = new HashSet<Position>();
 		this.levelGenerated = generateLevel();
 	}
 	
-	public Element[][] generateLevel() throws IOException{
+	/**
+	 * Generate the board, the character position and the list of endPoint
+	 * @return
+	 * @throws IOException
+	 */
+	private Element[][] generateLevel() throws IOException{
 		File fileLevel = new File("level/Level"+levelNumber);
 		FileReader fileReader = new FileReader(fileLevel);
 		fileReader.read();
@@ -83,29 +104,46 @@ public class Level
 		return level;
 	}
 	
+	/**
+	 * Increment the position for the next element
+	 * @param posi
+	 * @return fin
+	 */
 	private Position incrementPosition(Position posi)
 	{
-		Position fin = new Position(0,0);
-		fin.setPosiY(posi.getPosiY());
-		fin.setPosiX(posi.getPosiX()+1);
-		if (fin.getPosiX()==NUMBER_LINE_DEFAULT)
+		Position newPosi = new Position(0,0);
+		newPosi.setPosiY(posi.getPosiY());
+		newPosi.setPosiX(posi.getPosiX()+1);
+		if (newPosi.getPosiX()==NUMBER_LINE_DEFAULT)
 		{
-			fin.setPosiX(0);
-			fin.setPosiY(posi.getPosiY()+1);
+			newPosi.setPosiX(0);
+			newPosi.setPosiY(posi.getPosiY()+1);
 		}
-		return fin;
+		return newPosi;
 	}
 
+	/**
+	 * get the board of the level generated
+	 * @return levelGenerated
+	 */
 	public Element[][] getLevelGenerated()
 	{
 		return levelGenerated;
 	}
 
+	/**
+	 * get the start position of the character
+	 * @return
+	 */
 	public Position getPosiCharacter()
 	{
 		return PosiCharacter;
 	}
 
+	/**
+	 * get the list of end points
+	 * @return
+	 */
 	public Set<Position> getListEndPoint()
 	{
 		return listEndPoint;

@@ -44,7 +44,7 @@ public class Board
 	 * @param posY
 	 * @return Element
 	 */
-	public Element getElement(Position pos)
+	private Element getElement(Position pos)
 	{
 		return this.board[pos.getPosiX()][pos.getPosiY()];
 	}
@@ -63,7 +63,7 @@ public class Board
 		{
 			moveCharacter(newPosi);
 		}
-		else
+		else if(this.getElement(newPosi).isCrate())
 		{
 			Position newPosiCrate = new Position(newPosi.getPosiX() + move.getDeltaX(), 
 					newPosi.getPosiY() + move.getDeltaY());
