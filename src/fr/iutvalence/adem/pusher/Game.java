@@ -18,13 +18,17 @@ public class Game
 	 * The constructor
 	 * @throws IOException 
 	 */
-	public Game(int lvlNumber) throws IOException
+	public Game(int lvlNumber, int lvlMax) throws IOException, LevelNumberException
 	{
+		if (lvlNumber > lvlMax){
+			throw new LevelNumberException();
+		}
 		this.board = new Board(lvlNumber);
 	}
 	
 	/**
 	 * Start a game
+	 * @throws WrongMoveException 
 	 */
 	public void start()
 	{
