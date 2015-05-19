@@ -1,4 +1,4 @@
-package fr.iutvalence.adem.pusher.element;
+package fr.iutvalence.adem.pusher.model.element;
 
 /**
  * EndPoint representation on the board.

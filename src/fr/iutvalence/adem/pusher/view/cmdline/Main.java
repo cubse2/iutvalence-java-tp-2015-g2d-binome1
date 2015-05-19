@@ -1,8 +1,9 @@
-package fr.iutvalence.adem.pusher;
+package fr.iutvalence.adem.pusher.view.cmdline;
 
 import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
+import fr.iutvalence.adem.pusher.model.LevelNumberException;
 
 /**
  * the Main class

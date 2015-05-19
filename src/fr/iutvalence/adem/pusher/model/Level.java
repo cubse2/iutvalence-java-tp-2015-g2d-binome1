@@ -1,4 +1,4 @@
-package fr.iutvalence.adem.pusher;
+package fr.iutvalence.adem.pusher.model;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,12 +9,12 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-import fr.iutvalence.adem.pusher.element.Character;
-import fr.iutvalence.adem.pusher.element.Crate;
-import fr.iutvalence.adem.pusher.element.Element;
-import fr.iutvalence.adem.pusher.element.EndPoint;
-import fr.iutvalence.adem.pusher.element.Floor;
-import fr.iutvalence.adem.pusher.element.Wall;
+import fr.iutvalence.adem.pusher.model.element.Character;
+import fr.iutvalence.adem.pusher.model.element.Crate;
+import fr.iutvalence.adem.pusher.model.element.Element;
+import fr.iutvalence.adem.pusher.model.element.EndPoint;
+import fr.iutvalence.adem.pusher.model.element.Floor;
+import fr.iutvalence.adem.pusher.model.element.Wall;
 
 /**
  * The generator of level in the game.

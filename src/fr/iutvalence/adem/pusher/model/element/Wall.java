@@ -1,4 +1,4 @@
-package fr.iutvalence.adem.pusher.element;
+package fr.iutvalence.adem.pusher.model.element;
 
 /**
  * wall on the board.

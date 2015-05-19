@@ -1,4 +1,4 @@
-package fr.iutvalence.adem.pusher;
+package fr.iutvalence.adem.pusher.model;
 
 /**
  * The exception when the player select high level. 

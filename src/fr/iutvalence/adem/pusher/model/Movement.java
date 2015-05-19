@@ -1,4 +1,4 @@
-package fr.iutvalence.adem.pusher;
+package fr.iutvalence.adem.pusher.model;
 
 /**
  * Enumeration of different possible movement in the game.

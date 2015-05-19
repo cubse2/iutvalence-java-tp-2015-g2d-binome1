@@ -1,4 +1,4 @@
-package fr.iutvalence.adem.pusher.element;
+package fr.iutvalence.adem.pusher.model.element;
 
 /**
  * Character on the board.

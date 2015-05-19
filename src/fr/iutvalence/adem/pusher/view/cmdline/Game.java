@@ -1,7 +1,8 @@
-package fr.iutvalence.adem.pusher;
+package fr.iutvalence.adem.pusher.view.cmdline;
 
 import java.io.IOException;
 import java.util.Scanner;
+import fr.iutvalence.adem.pusher.model.*;
 
 /**
  * Represent a game

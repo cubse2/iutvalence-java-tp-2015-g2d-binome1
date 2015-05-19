@@ -1,4 +1,4 @@
-package fr.iutvalence.adem.pusher;
+package fr.iutvalence.adem.pusher.model;
 
 /**
  * position of an element.
