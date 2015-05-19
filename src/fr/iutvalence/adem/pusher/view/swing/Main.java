@@ -1,9 +1,10 @@
-package fr.iutvalence.adem.pusher.view.cmdline;
+package fr.iutvalence.adem.pusher.view.swing;
 
 import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import fr.iutvalence.adem.pusher.model.LevelNumberException;
+
 
 /**
  * the Main class
@@ -23,6 +24,7 @@ public class Main {
 	 */
     public static void main(String[] args) throws IOException, LevelNumberException {
     	
+    	Interface intermarche = new Interface();
     	
     	int lvlNumber = 0;
     	char charNewGame = 'y';
