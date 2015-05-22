@@ -10,6 +10,7 @@ import fr.iutvalence.adem.pusher.model.*;
  */
 public class Game
 {
+	private int lvlMax;
 	/**
 	 * The board
 	 */
