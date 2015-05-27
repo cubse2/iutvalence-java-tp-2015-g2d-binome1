@@ -32,25 +32,38 @@ public class Main
 			LevelNumberException
 	{
 
-		// Interface intermarche = new Interface();
-
+		JButton levelButton;
+		String[] listButton = new String[5];
 		
-		//SelectLevel levelFrame = new SelectLevel(this, "Select Level!", true, levelMax);
-		int i = JOptionPane.showOptionDialog(
-				null, "Test message", "Test titre", JOptionPane.DEFAULT_OPTION, 
-				JOptionPane.PLAIN_MESSAGE, 
-				null,
-				new Component[]{
-					new JButton("Option 1"),
-					new JButton("Option 2")
-				}, null);
-		System.out.println(i);
-		final Game game = new Game(levelMax, levelMax);
-		game.play();
-		levelMax++;
-	}
-	
-	protected void startLevel(int level) {
+		for(int levelNumber=1; levelNumber<=5; levelNumber++ ){
+				listButton[levelNumber-1] = "Level "+levelNumber;
+		}
 		
+		int choice;
+		
+		do{
+			choice = JOptionPane.showOptionDialog(
+					null, "Select your level", "Selection level", JOptionPane.DEFAULT_OPTION, 
+					JOptionPane.PLAIN_MESSAGE, 
+					null,
+					listButton,
+					listButton[0]);
+			if(choice+1 > levelMax){
+				JOptionPane.showMessageDialog(null, "Select lower level", "Error level", JOptionPane.ERROR_MESSAGE);
+			}
+		} while(choice+1 > levelMax);
+		
+		if (choice == -1){
+			System.exit(0);
+		}
+		
+		do{
+			final Game game = new Game(choice+1, levelMax);
+			game.play();
+			levelMax++;
+			choice = JOptionPane.showConfirmDialog (null, "Would You Like to continue?","Continue game", JOptionPane.YES_NO_OPTION);
+		} while(choice != 1);
+		
+		//levelMax++;
 	}
 }

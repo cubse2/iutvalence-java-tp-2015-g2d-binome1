@@ -2,6 +2,7 @@ package fr.iutvalence.adem.pusher.view.swing;
 
 import java.io.IOException;
 import java.util.Scanner;
+
 import fr.iutvalence.adem.pusher.model.*;
 
 /**
@@ -10,12 +11,12 @@ import fr.iutvalence.adem.pusher.model.*;
  */
 public class Game
 {
-	private int lvlMax;
+
 	/**
 	 * The board
 	 */
 	private Board board;
-
+	private int level;
 	/**
 	 * The constructor
 	 * @throws IOException 
@@ -26,6 +27,7 @@ public class Game
 			throw new LevelNumberException("Level not available!");
 		}
 		this.board = new Board(lvlNumber);
+		this.level = lvlNumber;
 	}
 	
 	/**
@@ -34,7 +36,9 @@ public class Game
 	 */
 	public void play()
 	{
-		System.out.println(this.board);
+		Interface mainFrame = new Interface(this.level);
+		mainFrame.actualise(board.getBoard());
+		
 		Scanner sc = new Scanner(System.in);
 		while (!board.isWon())
 		{

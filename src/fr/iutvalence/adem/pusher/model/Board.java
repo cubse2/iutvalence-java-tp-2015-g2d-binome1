@@ -119,6 +119,11 @@ public class Board
 		this.board[newPosiCrate.getPosiX()][newPosiCrate.getPosiY()] = new Crate();
 	}
 
+	public Element[][] getBoard()
+	{
+		return board;
+	}
+
 	@Override
 	public String toString()
 	{

@@ -5,12 +5,6 @@ import java.awt.event.ActionListener;
 
 public class ButtonListener implements ActionListener
 {
-	private int level;
-	
-	public ButtonListener(int level){
-		this.level = level;
-	}
-
 	@Override
 	public void actionPerformed(ActionEvent arg0)
 	{
