@@ -43,24 +43,14 @@ public class Game
 		
 		while (!board.isWon())
 		{
-			switch (mainFrame.getKey().getKeyChar())
-			{
-			case 'z':
-				this.board.move(Movement.UP);
-				break;
-			case 'q':
-				this.board.move(Movement.LEFT);
-				break;
-			case 's':
-				this.board.move(Movement.DOWN);
-				break;
-			case 'd':
-				this.board.move(Movement.RIGHT);
-				break;
+			if(mainFrame.getMovement() != null){
+				this.board.move(mainFrame.getMovement());
+				mainFrame.setMovement(null);
+				mainFrame.actualise(board);
 			}
-			mainFrame.actualise(board);
 		}
 		this.victory();
+		mainFrame.dispose();
 	}
 	
 	/**

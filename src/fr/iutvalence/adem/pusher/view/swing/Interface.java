@@ -17,13 +17,14 @@ import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 
 import fr.iutvalence.adem.pusher.model.Board;
+import fr.iutvalence.adem.pusher.model.Movement;
 import fr.iutvalence.adem.pusher.model.Position;
 import fr.iutvalence.adem.pusher.model.element.Element;
 
 public class Interface extends JFrame implements KeyListener
 {
 	private JPanel boardFrame;
-	private KeyEvent key;
+	private Movement movement;
 	
 	public Interface(int level){
 		  
@@ -36,7 +37,8 @@ public class Interface extends JFrame implements KeyListener
 		  /**
 		   * JButton reset
 		   */
-		  //JButton reset = new JButton("Reset");
+		  JButton reset = new JButton("Reset");
+		  reset.setFocusable(false);
 		  /**
 		   * Label, text for the game.
 		   */
@@ -52,14 +54,14 @@ public class Interface extends JFrame implements KeyListener
 		  /**
 		   * JSplitPane with reset button and the JLabel.
 		   */
-		  //JSplitPane supSplit = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, sup, reset);
-		  //supSplit.setDividerSize(0);
-		  //reset.setMinimumSize(new Dimension(100,30));
+		  JSplitPane supSplit = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, sup, reset);
+		  supSplit.setDividerSize(0);
+		  reset.setMinimumSize(new Dimension(100,30));
 		  sup.setPreferredSize(new Dimension(540,42));
 		  /**
 		   * Add the component to the Frame.
 		   */
-		  //this.add(supSplit, BorderLayout.PAGE_START);
+		  this.add(supSplit, BorderLayout.PAGE_START);
 		  this.add(inf, BorderLayout.PAGE_END);
 		  /**
 		   * Set Visible...
@@ -76,6 +78,7 @@ public class Interface extends JFrame implements KeyListener
 	{
 		int size = board.getBoard().length;
 		ImageIcon img;
+		this.boardFrame.removeAll();
 		this.boardFrame.setLayout(new GridLayout(size, size, 0, 0));
 		JLabel box;
 		for (int i = 0; i < size; i++)
@@ -104,7 +107,22 @@ public class Interface extends JFrame implements KeyListener
 
 	@Override
     public void keyPressed(KeyEvent e) {
-        this.key = e;
+		System.out.println(e.getKeyChar());
+		switch (e.getKeyChar())
+		{
+		case 'z':
+			this.movement = Movement.UP;
+			break;
+		case 'q':
+			this.movement = Movement.LEFT;
+			break;
+		case 's':
+			this.movement = Movement.DOWN;
+			break;
+		case 'd':
+			this.movement = Movement.RIGHT;
+			break;
+		}
 	}
 
 	@Override
@@ -122,9 +140,14 @@ public class Interface extends JFrame implements KeyListener
 	}
 
 
-	public KeyEvent getKey()
+	public Movement getMovement()
 	{
-		return key;
+		return this.movement;
+	}
+	
+	public void setMovement(Movement move)
+	{
+		this.movement = move;
 	}
 	
 	
