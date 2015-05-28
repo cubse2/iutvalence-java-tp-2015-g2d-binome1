@@ -1,5 +1,7 @@
 package fr.iutvalence.adem.pusher.view.swing;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -37,29 +39,26 @@ public class Game
 	public void play()
 	{
 		Interface mainFrame = new Interface(this.level);
-		mainFrame.actualise(board.getBoard());
+		mainFrame.actualise(board);
 		
-		Scanner sc = new Scanner(System.in);
 		while (!board.isWon())
 		{
-			System.out.println("Move ? : ");
-			String mv = sc.nextLine();
-			switch (mv)
+			switch (mainFrame.getKey().getKeyChar())
 			{
-			case "z":
+			case 'z':
 				this.board.move(Movement.UP);
 				break;
-			case "q":
+			case 'q':
 				this.board.move(Movement.LEFT);
 				break;
-			case "s":
+			case 's':
 				this.board.move(Movement.DOWN);
 				break;
-			case "d":
+			case 'd':
 				this.board.move(Movement.RIGHT);
 				break;
 			}
-			System.out.println(this.board);
+			mainFrame.actualise(board);
 		}
 		this.victory();
 	}
@@ -70,4 +69,6 @@ public class Game
 	private void victory(){
 		System.out.println("Congratulation !!!");
 	}
+
+
 }

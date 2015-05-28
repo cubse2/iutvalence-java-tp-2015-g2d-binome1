@@ -44,7 +44,7 @@ public class Board
 	 * @param posY
 	 * @return Element
 	 */
-	private Element getElement(Position pos)
+	public Element getElement(Position pos)
 	{
 		return this.board[pos.getPosiX()][pos.getPosiY()];
 	}
